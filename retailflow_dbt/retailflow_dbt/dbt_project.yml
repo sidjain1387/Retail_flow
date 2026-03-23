@@ -1,0 +1,33 @@
+name: 'retailflow_dbt'
+version: '1.0.0'
+config-version: 2
+
+profile: 'retailflow_dbt'
+
+model-paths:    ["models"]
+analysis-paths: ["analyses"]
+test-paths:     ["tests"]
+seed-paths:     ["seeds"]
+macro-paths:    ["macros"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  retailflow_dbt:
+    bronze:
+      +materialized: view
+      +schema: BRONZE
+    silver:
+      +materialized: table
+      +schema: SILVER
+    gold:
+      +materialized: table
+      +schema: GOLD
+
+seeds:
+  retailflow_dbt:
+    +schema: RAW
