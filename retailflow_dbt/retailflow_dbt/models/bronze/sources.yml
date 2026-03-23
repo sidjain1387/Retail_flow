@@ -1,0 +1,68 @@
+version: 2
+
+sources:
+  - name: raw_retailflow
+    database: RETAILFLOW_DB
+    schema: RAW
+    description: "Raw retail sales data — loaded via dbt seed and Snowpipe"
+
+    tables:
+      - name: dim_customer
+        description: "Customer master data with region for RAP"
+        columns:
+          - name: customer_id
+            tests: [unique, not_null]
+          - name: email
+            tests: [not_null]
+          - name: region
+            tests:
+              - accepted_values:
+                  values: ['North', 'South', 'East', 'West']
+
+      - name: dim_product
+        description: "Product catalog with pricing"
+        columns:
+          - name: product_id
+            tests: [unique, not_null]
+          - name: unit_price
+            tests: [not_null]
+
+      - name: dim_store
+        description: "Store master with region"
+        columns:
+          - name: store_id
+            tests: [unique, not_null]
+
+      - name: dim_date
+        description: "Date dimension with season and holiday flags"
+        columns:
+          - name: date_id
+            tests: [unique, not_null]
+
+      - name: fact_sales
+        description: "Sales transactions from POS system"
+        columns:
+          - name: order_id
+            tests: [unique, not_null]
+          - name: customer_id
+            tests:
+              - not_null
+              - relationships:
+                  to: source('raw_retailflow', 'dim_customer')
+                  field: customer_id
+          - name: product_id
+            tests:
+              - not_null
+              - relationships:
+                  to: source('raw_retailflow', 'dim_product')
+                  field: product_id
+          - name: store_id
+            tests:
+              - not_null
+              - relationships:
+                  to: source('raw_retailflow', 'dim_store')
+                  field: store_id
+          - name: order_status
+            tests:
+              - accepted_values:
+                  values: ['Delivered', 'Returned', 'Cancelled', 'Pending']

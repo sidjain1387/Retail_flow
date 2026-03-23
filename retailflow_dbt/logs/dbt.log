@@ -1,0 +1,55 @@
+[0m16:39:41.938725 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFEE9D6C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFEE9D4790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFEE9D5790>]}
+
+
+============================== 16:39:41.947233 | b666be5b-3ec0-467e-b24f-99d105a2145c ==============================
+[0m16:39:41.947233 [info ] [MainThread]: Running with dbt=1.11.6
+[0m16:39:41.952046 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Chirag\\.dbt', 'use_colors': 'True', 'invocation_command': 'dbt init retailflow_dbt', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m16:39:42.044193 [debug] [MainThread]: Starter project path: C:\Users\Chirag\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\include\starter_project
+[0m16:39:42.174333 [info ] [MainThread]: 
+Your new dbt project "retailflow_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m16:39:42.174333 [info ] [MainThread]: Setting up your profile.
+[0m16:39:58.067536 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m16:39:58.071568 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m16:39:58.074649 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m16:42:08.257953 [info ] [MainThread]: Profile retailflow_dbt written to C:\Users\Chirag\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m16:42:08.286783 [debug] [MainThread]: Command `dbt init` succeeded at 16:42:08.286783 after 146.49 seconds
+[0m16:42:08.299241 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFEEA41D10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFE7B4C250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFE7B4C410>]}
+[0m16:42:08.307555 [debug] [MainThread]: Flushing usage events
+[0m16:42:09.989552 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:42:20.747629 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E735B57750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E735B55610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E735B57510>]}
+
+
+============================== 16:42:20.762417 | 76f7024f-1973-42fa-89b9-59ba601afc7f ==============================
+[0m16:42:20.762417 [info ] [MainThread]: Running with dbt=1.11.6
+[0m16:42:20.764510 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Chirag\\.dbt', 'invocation_command': 'dbt debug', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m16:42:20.852940 [info ] [MainThread]: dbt version: 1.11.6
+[0m16:42:20.856079 [info ] [MainThread]: python version: 3.11.5
+[0m16:42:20.857825 [info ] [MainThread]: python path: C:\Users\Chirag\AppData\Local\Programs\Python\Python311\python.exe
+[0m16:42:20.863379 [info ] [MainThread]: os info: Windows-10-10.0.26200-SP0
+[0m16:42:23.388036 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m16:42:23.390042 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m16:42:23.392050 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m16:42:23.533300 [info ] [MainThread]: Using profiles dir at C:\Users\Chirag\.dbt
+[0m16:42:23.534477 [info ] [MainThread]: Using profiles.yml file at C:\Users\Chirag\.dbt\profiles.yml
+[0m16:42:23.534477 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Chirag\OneDrive\Desktop\test\Retail_flow\retailflow_dbt\dbt_project.yml
+[0m16:42:23.534477 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m16:42:23.538974 [debug] [MainThread]: Command `dbt debug` failed at 16:42:23.538974 after 2.95 seconds
+[0m16:42:23.544672 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E735B4D250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E735B4C110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E74FC93FD0>]}
+[0m16:42:23.547202 [debug] [MainThread]: Flushing usage events
+[0m16:42:25.243055 [debug] [MainThread]: An error was encountered while trying to flush usage events
